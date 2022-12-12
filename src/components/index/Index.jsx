@@ -49,7 +49,7 @@ return (
 </div>  
 <Link to="/crear"><button className="crearCurso">Crear curso</button></Link>
 <Link to="/editar"><button className="crearCurso">Editar curso</button></Link>
-<Link to="/inicio"><button className="cerrarUp">↑</button></Link>        
+<Link to="/index"><button className="cerrarUp">↑</button></Link>        
 </header>   
 );
 }
