@@ -1,0 +1,308 @@
+.App {
+text-align: center;
+}
+
+.App-logo {
+height: 40vmin;
+pointer-events: none;
+}
+
+@keyframes fade-in {
+  0% { opacity: 0; }
+  5% {opacity: 0.05}
+  10% {opacity: 0.1}
+  15% {opacity: 0.15}
+  20% {opacity: 0.2}
+  25% {opacity: 0.25}
+  30% {opacity: 0.3}
+  35% {opacity: 0.35}
+  40% {opacity: 0.4}
+  45% {opacity: 0.45}
+  50% {opacity: 0.5}
+  55% {opacity: 0.55}
+  60% {opacity: 0.6}
+  65% {opacity: 0.65}
+  70% {opacity:0.7}
+  75% {opacity: 0.75}
+  80% {opacity: 0.8}
+  85% {opacity: 0.85}
+  90% {opacity: 0.9}
+  95% {opacity: 0.95}
+  100% { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+background-color: black;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+font-size: calc(10px + 2vmin);
+color: white;
+padding-top: 0px;
+width: 100%;
+}
+
+.App-link {
+color: #61dafb;
+}
+
+.titulo {
+  color: lightgreen;
+  font-family: 'Satisfy', cursive; 
+  text-decoration: yellow underline 
+}
+
+.contenedorCursos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);  
+}
+
+.contenedorCurso {
+opacity: 0;
+position: relative;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+background-color: rgb(101, 3, 88);
+padding: 5px;
+padding-top: 10px;
+margin: 15px;
+max-width: 300px;
+min-width: 300px;
+height: 370px;
+border: solid rgb(230, 180, 255) 2px;
+border-radius: 10%;
+transform: scale(0.75);
+transition: ease 2.2s;
+animation: fade-in 0.5s forwards;
+animation-duration: 1.25s;
+box-shadow: 0px 0px 15px rgb(144, 233, 238);
+}
+
+.contenedorCurso h2 {  
+display:flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+font-size: 1rem;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.cursoNombre {
+position: absolute;
+top: 125px;
+color: white;
+}
+
+.cursoNombre h4 {
+color: rgb(148, 148, 148);
+}
+
+.idCurso {
+  position:absolute;
+  top: 30px;
+  left: 30px;
+  font-size: 0.9rem;
+}
+
+.imagenCurso {
+border-radius: 15%;
+position: absolute;
+top: 15px;
+}
+
+.descripcionCurso {
+display: none;
+}
+
+.borrarCurso {
+position: absolute;
+top: 200px;
+color: white; 
+min-width: 150px; 
+background-color: rgb(108, 4, 4);
+border-radius: 5%;
+height: 35px;
+}
+
+.borrarCurso:hover {
+background-color: red;
+transform: scale(0.95);
+transition: 0.5s;
+}
+
+.cerrar {
+background-color: white;
+border-radius: 50%;
+background-color: rgb(191, 191, 191);
+margin-bottom: 10px;  
+}
+
+.cerrarUp {
+position: relative;
+bottom: 35px;
+background-color: white;
+border-radius: 50%;
+background-color: rgb(191, 191, 191);
+margin-bottom: 10px;
+margin-top: 20px !important;  
+}
+
+.entrar {
+width: 60px;
+height: 60px;
+border-radius: 50%;
+background-color: rgb(121, 16, 135);
+border: solid 3px rgb(157, 50, 172);
+}
+
+.entrar:hover {
+background-color: rgb(49, 240, 49);
+border: solid 3px rgb(65, 106, 65);
+transform: scale(0.99);
+transition: 1s;
+}
+
+.verCursos {
+background-color: rgb(113, 36, 185);
+color: rgb(220, 184, 254);
+border-radius: 10%;
+margin-bottom: 20px;
+height: 30px;
+width: 90px;
+border: solid 2px rgb(220, 184, 254) ;
+}
+
+.verCursos:hover {
+transform: scale(0.97); 
+background-color: rgb(132, 55, 204); 
+transition: 0.2s;
+}
+
+.crearCurso {
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: rgb(113, 36, 185);
+color: rgb(220, 184, 254);
+border-radius: 10%;
+margin-bottom: 20px;
+height: 30px;
+width: 90px;
+border: solid 2px rgb(220, 184, 254);
+text-decoration: none;
+}
+
+.crearCursoDown {
+position: relative;
+top: 20px;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: rgb(113, 36, 185);
+color: rgb(220, 184, 254);
+border-radius: 10%;
+margin-bottom: 20px;
+height: 30px;
+width: 90px;
+border: solid 2px rgb(220, 184, 254);
+text-decoration: none;
+}
+.crearCursoDown:hover {
+transform: scale(0.97); 
+background-color: rgb(132, 55, 204); 
+transition: 0.2s;
+}
+
+.crearCurso:hover {
+transform: scale(0.97); 
+background-color: rgb(132, 55, 204); 
+transition: 0.2s;
+}
+
+.cursoDescripcion {
+opacity: 0;
+animation: fade-in 0.5s forwards;
+animation-duration: 0.5s;
+transition: 0.1s
+}
+
+.Crear {
+/**background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUMTJtvpn2wmwF9ZU-VpCa1CPr9twP4gZjwD9nBlezivj3gk2KoZOCzQi4agBmwwmo2bI&usqp=CAU);**/
+opacity: 0;
+background-size: cover;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+border: solid 1px purple;
+padding: 15px;
+box-shadow: 0px 0px 15px white;
+border-radius: 10%;
+min-width: 300px;
+transition: ease 2.2s;
+animation: fade-in 0.5s forwards;
+animation-duration: 1.25s;
+}
+
+.Crear label {
+font-size: 1rem;
+background-color: rgba(0,0,0, 0.6);
+}
+
+.Crear input, textarea {
+background-color: black;
+color: white;
+width: 200px;
+box-shadow: 0px 0px 6px white;
+} 
+
+::placeholder {
+color: rgb(109, 109, 109);
+text-align: center;  
+}
+
+.Crear label, input {
+margin: 10px;     
+}
+
+.enviarCurso {
+background-color: rgb(113, 36, 185);
+color: rgb(220, 184, 254);
+border-radius: 10%;
+margin-top: 10px;
+margin-bottom: 20px;
+height: 30px;
+width: 90px;
+border: solid 2px rgb(220, 184, 254) ;  
+}
+
+.enviarCurso:hover {
+transform: scale(0.97); 
+background-color: rgb(132, 55, 204); 
+transition: 0.2s;
+}
+
+.cherryDos {
+width: 65px;
+height:65px;
+position: absolute;
+bottom: 545px;
+left: 600px;
+}
+
+@media (max-width: 700px) {
+  .contenedorCursos {
+  display: grid;
+  grid-template-columns: 1fr;
+  }  
+}
